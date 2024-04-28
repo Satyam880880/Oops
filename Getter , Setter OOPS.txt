@@ -1,0 +1,35 @@
+public class O{
+public static void main(String args[]){
+    pen p1 = new pen();  // created a object called p1
+    p1.setcolor("Blue");
+    System.out.println(p1.getColor());
+    p1.settip(5);
+    System.out.println(p1.getTip());
+      // p1.setcolor("yellow");
+   // System.out.println(p1.color);
+   p1.setcolor("yellow");
+   System.out.println(p1.getColor());
+}
+}
+// pooperties
+
+class pen {
+  private  String color;
+   private int tip;
+
+    // Getters
+    String getColor(){
+        return this.color;
+    }
+    int getTip() {
+        return this.tip;
+    }
+    // function   , Setters
+    void  setcolor(String newcolor){
+        this.color = newcolor;
+    }
+
+    void settip(int Tip){
+        this.tip = Tip;
+    }
+}
