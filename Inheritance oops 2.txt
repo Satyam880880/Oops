@@ -1,0 +1,39 @@
+
+class HelloWorld {
+    public static void main(String[] args) {
+        // Animal doddy = new Animal();
+       //  doddy.eat();
+       // doddy.walk(); // nahi print hoga
+       /*
+       Mamel s1 = new Mamel();
+       s1.walk();
+       s1.eat();
+       // s1.name(); // nahi print hoga
+       */ 
+        Name s2 = new Name();
+        s2.walk();
+       s2.eat();
+        s2.name();
+        s2.number = 12;
+         System.out.println(s2.number);
+    }
+}
+class Animal{
+    int number;
+    void eat(){
+        System.out.println("eat");
+    }
+    void breathe(){
+        System.out.println("breathe");
+    }
+}
+class Mamel extends Animal {
+    void walk(){
+         System.out.println("walk");
+    }
+}
+class Name extends Mamel {
+    void name(){
+        System.out.println("Satyam Maurya"); 
+    }
+}
