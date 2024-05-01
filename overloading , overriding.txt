@@ -1,0 +1,41 @@
+
+public class O{
+public static void main(String args[]){
+    // overloading
+    /* 
+    Calulator calc = new Calulator();
+    System.out.println(calc.sum(1,2));
+    System.out.println(calc.sum((float)1.5,(float)2.5));
+    System.out.println(calc.sum(1,2,3));
+    */
+    // overriding
+    Dear D = new Dear();
+    D.eat();   // only print int eats grass , only child class
+   // Animal d =  new Animal();
+     // d.eat();
+}
+}
+
+// overloading
+class Calulator {
+    int sum( int a,int b){
+        return a+b;
+    }
+    float sum(float a, float b){
+        return a+b;
+    }
+    int sum(int a,int b, int c){
+        return a+b+c;
+    }
+}
+// overriding
+class Animal {
+    void eat(){
+         System.out.println("eat anything");
+    }
+}
+class Dear extends Animal{
+    void eat(){
+        System.out.println("eats grass");
+    }
+} 
