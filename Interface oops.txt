@@ -1,0 +1,47 @@
+public class O{
+    public static void main(String[] args) {
+       Queen q = new Queen();
+       q.moves();
+
+       Bear b = new Bear();
+       b.nonveg();
+       b.veg();
+    }
+}
+interface ChesePlayer {
+    void moves();   
+    /* ye public , abstact hai aur implement nahi likh sakte because abstration hai*/ 
+
+}
+class Queen implements ChesePlayer {
+    public void moves(){
+        System.out.println("up,down,left,right,diagonal (in all 4 dirns)");
+    }
+}
+class Rook implements ChesePlayer {
+    public void moves(){
+        System.out.println("up,down,left,right");
+    }
+}
+class King implements ChesePlayer {
+    public void moves(){
+        System.out.println("up,down,left,right,diagonal (in all 1 dirns)");
+    }
+}
+ 
+// multiple inheritance
+interface Herbivore {
+    void veg();
+}
+interface Carnvior {
+  void nonveg();
+}
+ class Bear implements Herbivore , Carnvior {
+        public void veg() {
+            System.out.println("Bear eat veg food");
+        }
+        public void nonveg() {
+            System.out.println("Bear eat nonveg food");
+        }
+ }
+ 
